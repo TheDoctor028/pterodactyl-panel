@@ -28,12 +28,10 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_DATABASE: controlpanel
-      MYSQL_USER: cpgg
-      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: pterodactyl
+      MYSQL_USER: pterodactyl
+      MYSQL_PASSWORD: pterodactyl
       MYSQL_ROOT_PASSWORD: root
-      SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
     networks:
       - laravel
 
