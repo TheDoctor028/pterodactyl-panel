@@ -18,6 +18,9 @@ Route::get('/login', [Auth\LoginController::class, 'index'])->name('auth.login')
 Route::get('/password', [Auth\LoginController::class, 'index'])->name('auth.forgot-password');
 Route::get('/password/reset/{token}', [Auth\LoginController::class, 'index'])->name('auth.reset');
 
+Route::get('/oauthlogin', [Auth\LoginController::class, 'oauthLogin'])->name('auth.oauthlogin');
+Route::get('/callback', [Auth\LoginController::class, 'oauthRedirect'])->name('auth.oauthlogin');
+
 // Apply a throttle to authentication action endpoints, in addition to the
 // recaptcha endpoints to slow down manual attack spammers even more. 🤷‍
 //
